@@ -1,8 +1,6 @@
 # Welcome to Oauth of Google
 
-Integration of Google Integration
-
-Integration in Nodejs
+Integration of Google Oauth in Nodejs
 
 External Npm Uses in Project
 
