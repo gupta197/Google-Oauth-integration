@@ -1,12 +1,16 @@
 const express = require('express');
 const app = express();
 const {google} = require('googleapis');
-
+let keys = {
+  redirecturl:process.env.REDIRECTURL,
+  clientSecrect:process.env.CLIENTSECRET,
+  clientID:process.env.CLIENTID
+ }
 
 const oauth2Client = new google.auth.OAuth2(
-    '774023301237-gupr1jl4tog90t2trbc85ksfb5cnee1q.apps.googleusercontent.com',
-    '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',
-    'http://localhost:4000/oauthAuthorisation'
+    keys.clientID,
+    keys.clientSecrect,
+    keys.redirecturl,
   );
   // Access scopes for read-only Drive activity.
 const scopes = [
